@@ -1831,6 +1831,10 @@ dialog.is-closing {
   .discovery .section-heading {
     padding-inline: var(--page-gutter);
   }
+  .discovery .eyebrow {
+    position: relative;
+    top: -24px;
+  }
   .discovery-content {
     gap: 28px;
   }
