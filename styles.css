@@ -1048,9 +1048,11 @@ html:has(.card-page) {
 }
 .discovery .eyebrow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
   text-align: center;
   color: #c8cacf;
 }
