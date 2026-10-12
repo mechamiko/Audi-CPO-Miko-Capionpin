@@ -1766,7 +1766,9 @@ dialog.is-closing {
     width: 100%;
     height: auto;
     max-width: 100%;
-    object-fit: contain;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 5% center;
   }
   .match-copy {
     width: 100%;
@@ -1824,6 +1826,10 @@ dialog.is-closing {
   }
   .benefit-copy h4 {
     line-height: 1.4;
+  }
+  .benefit-copy .roadside-link {
+    display: inline;
+    word-break: break-all;
   }
   .lineup > h2 {
     font-size: clamp(23px, 6vw, 28px);
