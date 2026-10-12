@@ -432,7 +432,12 @@ img {
   justify-content: flex-end;
   padding: 3.3125rem 5rem;
 }
-.match-banner > img {
+.match-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.match-image img {
   position: absolute;
   width: 100%;
   height: 133.33%;
@@ -736,7 +741,7 @@ html:has(.card-page) {
   .match-copy h2 {
     font-size: 32px;
   }
-  .match-banner > img {
+  .match-image img {
     height: 100%;
     top: 0;
     object-fit: cover;
@@ -864,7 +869,7 @@ html:has(.card-page) {
   .benefit-image {
     width: 100%;
   }
-  .match-banner > img {
+  .match-image img {
     left: -10%;
     top: 25%;
   }
@@ -1042,7 +1047,16 @@ html:has(.card-page) {
   background: linear-gradient(180deg, #101319dc, #101319e8);
 }
 .discovery .eyebrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
   color: #c8cacf;
+}
+.discovery .eyebrow::before {
+  display: block;
+  margin: 0;
 }
 .discovery .section-heading p {
   color: #d7d9dd;
@@ -1683,17 +1697,17 @@ dialog.is-closing {
     margin-top: 16px;
   }
   .lineup-row {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 56px minmax(0, 1fr);
     padding: 18px 0 22px;
     gap: 14px;
   }
   .lineup-image,
-  .lineup-icon,
-  .lineup-copy,
   .lineup .inventory-button {
-    grid-column: 1;
+    grid-column: 1 / -1;
   }
   .lineup-icon {
+    grid-column: 1;
+    grid-row: 2;
     justify-self: center;
     align-self: center;
     width: 56px;
@@ -1704,8 +1718,10 @@ dialog.is-closing {
     height: 28px;
   }
   .lineup-copy {
-    text-align: center;
-    align-items: center;
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+    align-items: stretch;
     gap: 10px;
   }
   .lineup-copy p {
@@ -1760,7 +1776,13 @@ dialog.is-closing {
     padding: 0;
     background: var(--ink);
   }
-  .match-banner > img {
+  .match-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .match-image img {
     position: relative;
     inset: auto;
     width: 100%;

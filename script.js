@@ -194,6 +194,7 @@ function initializeScrollAnimations() {
     ".section-heading",
     ".wide-image",
     ".benefit-row",
+    ".match-image",
     ".match-copy",
     ".resource-copy",
     ".lineup > h2",
@@ -209,6 +210,18 @@ function initializeScrollAnimations() {
         }
 
         observer.unobserve(target);
+
+        if (target.matches(".match-image")) {
+          animateElement(
+            target.querySelector("img"),
+            [
+              { opacity: 0.7, transform: "scale(1.035)" },
+              { opacity: 1, transform: "scale(1)" },
+            ],
+            { duration: 1400 },
+          );
+          return;
+        }
 
         const elements = target.matches(".section-heading")
           ? [...target.children]
