@@ -1052,12 +1052,15 @@ html:has(.card-page) {
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 32px;
   gap: 12px;
   text-align: center;
   color: #c8cacf;
 }
 .discovery .eyebrow::before {
   display: block;
+  flex: 0 0 24px;
+  align-self: center;
   margin: 0;
 }
 .discovery .section-heading p {
