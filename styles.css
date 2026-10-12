@@ -1774,6 +1774,11 @@ dialog.is-closing {
   .lineup-row:hover .lineup-image img {
     transform: none;
   }
+  .driving img,
+  .driving:hover img {
+    transform: scale(1.35);
+    transform-origin: 60% 55%;
+  }
   .match-banner {
     height: auto;
     display: flex;
